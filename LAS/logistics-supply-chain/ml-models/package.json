@@ -1,9 +1,0 @@
-{
-  "name": "logistics-ml",
-  "version": "0.1.0",
-  "description": "ML microservices for logistics platform",
-  "scripts": {
-    "dev": "python server.py",
-    "start": "gunicorn --bind 0.0.0.0:5000 server:app"
-  }
-}
