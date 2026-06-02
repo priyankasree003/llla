@@ -1,0 +1,23 @@
+{
+  "name": "logistics-supply-chain-platform",
+  "version": "0.1.0",
+  "description": "End-to-end logistics and supply chain management platform with ML predictions and offline support",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend",
+    "desktop",
+    "ml-models"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\" \"npm run dev --workspace=ml-models\"",
+    "build": "npm run build --workspaces",
+    "start": "npm start --workspace=backend",
+    "desktop": "npm start --workspace=desktop",
+    "test": "npm test --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
